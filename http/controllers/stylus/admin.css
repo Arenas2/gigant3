@@ -1,0 +1,27 @@
+.subheader {
+  background-color: #e9f1f2;
+}
+.academico form {
+  margin: 0px;
+}
+.academico form md-input-container {
+  margin: 0px;
+}
+.academico form md-input-container md-errors-spacer {
+  height: 0px;
+  min-height: 0px;
+}
+.academico md-list md-list-item {
+  padding: 0px;
+}
+.academico md-list md-list-item .md-list-item-text p {
+  margin: 0px;
+}
+.academico md-list md-list-item md-fab-toolbar .md-fab-toolbar-wrapper,
+.academico md-list md-list-item md-fab-toolbar md-toolbar {
+  height: 40px;
+  min-height: 40px;
+}
+.academico md-list md-list-item .md-button {
+  margin: 0px;
+}

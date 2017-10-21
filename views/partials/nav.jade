@@ -1,22 +1,17 @@
-md-card(layout="row" layout-align="center center")
-	md-card-content
-		md-icon(md-colors="{color: 'cyan'}") star
-	span(flex)
-	//- Resolución completa
-	div.menu
-		md-menu-bar(hide-xs)
-			md-button(class="navbutton" ng-repeat="boton in botones" md-colors="{background: '{{boton.color}}'}" ui-sref="{{boton.sref}}")
-				md-icon(class="material-icons") {{boton.icon}}
-		//- Resolución mobil
-		md-menu-bar(hide-gt-xs)
-			md-menu
-				md-button(ng-click="$mdOpenMenu()")
-					md-icon.material-icons menu
-				md-menu-content
-					md-menu-item(ng-repeat="boton in botones")
-						md-button(class="navbutton" md-colors="{background: '{{boton.color}}'}" ui-sref="{{boton.sref}}") {{boton.title}}
-							md-icon(class="material-icons") {{boton.icon}}
-		md-button(ng-click="iniciosesion($event)" md-colors="{background: 'cyan'}")
-			md-icon settings
+.header-content(layout="row" layout-align="center center")
+	.logo-container(flex="60" ui-sref="home")
+		img(src="img/Logo2.png" hide-xs)
+		img(src="img/No_Foto.png" hide-gt-xs)
+	.slogan-container(flex="20")
+		img(src="img/El_Placer_de_Elegir.png" hide-xs)
+		md-button(hide-gt-xs ng-click="showPanel($event)")
+			md-icon menu
 
-		
+.subheader(layout="row" layout-align="center center" hide-xs)
+	md-nav-bar(md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" flex="60")
+		md-nav-item(md-nav-sref="productos" name="home" ng-class="{active: $state.current.name === 'home'}") Productos
+		md-nav-item(md-nav-sref="galeria" name="home" ng-class="{active: $state.current.name === 'home'}") Galería
+		md-nav-item(md-nav-sref="promociones" name="home" ng-class="{active: $state.current.name === 'home'}") Promociones
+		md-nav-item(md-nav-sref="catalogos" name="home" ng-class="{active: $state.current.name === 'home'}") Catálogos
+		md-nav-item(md-nav-sref="ubicaciones" name="home" ng-class="{active: $state.current.name === 'home'}") Tiendas
+		md-nav-item(md-nav-sref="nosotros" name="home" ng-class="{active: $state.current.name === 'home'}") ¿Porque nos prefieren?

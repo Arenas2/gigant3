@@ -1,0 +1,26 @@
+.filtro
+	md-card.titulo(style="background-color : {{categoria.color}}")
+		h1 {{categoria.nombre}}
+
+	.filtro-content(layout="row")
+		.filtros(flex="20" layout="column")
+			md-input-container
+				label Selecciona una marca
+				md-select(ng-model="producto.IdMarca")
+					md-option(ng-value="marca.id" ng-repeat="marca in marcas") {{marca.nombre}}
+			md-input-container
+				label Selecciona un color
+				md-select(ng-model="producto.IdColor")
+					md-option(ng-value="color.id" ng-repeat="color in colores") {{color.nombre}}
+		.contenido(flex)
+			md-grid-list(md-cols="4" md-row-height="2:3")
+				md-grid-tile(md-colspan="1" md-rowspan="1" ng-repeat="producto in productos")
+					md-card
+						img.md-card-image(src="{{producto.imagen}}")
+						md-card-title
+							md-card-title-text {{producto.nombre}}
+						md-list
+							md-list-item(ng-repeat="info in producto.infos")
+								.md-list-item-text
+									strong {{info.atributo.nombre}}
+									|  {{info.contenido}}

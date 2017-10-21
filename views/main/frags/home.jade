@@ -1,18 +1,23 @@
-.objeto(tweeninit)
-.animacion(layout="row" layout-align="center center" botones)
-    .texto-container
-        .texto
-            #texto1
-                h1 La primera impresión se da a los 4 segundos
-        .texto
-            #texto2
-                h1 En una página de internet es igual
-        .texto
-            #texto3
-                h1 Nuestas páginas web hechas a medida de cada cliente
-        .texto
-            #texto4
-                h1 y estan optimizadas para atraer clientes que buscan lo que ofreces
-        .texto
-            #texto5
-                h1 Como tu que buscabas una página de internet
+.home(layout="row" layout-align="center center")
+	.home-container(flex="100" layout="column")
+		.slider
+			.slide(layout-fill style="background-image:url(img//sliders/GP_Reinauguración_Tampico_1140x360.png")
+		md-grid-list(md-cols="10" md-row-height="250px" style="margin-top:0px")
+			md-grid-tile.productos(md-colspan="6" md-colspan-sm="10" md-colspan-xs="10" md-rowspan="1" )
+				.title
+					img(src="img/Txt_Disenamos_tu_espacio.png")
+			md-grid-tile.catalogos(md-colspan="4" md-colspan-sm="10" md-colspan-xs="10" md-rowspan="1")
+				.title
+					img(src="img/Index_Descarga_Nuestros_Catalogos.jpg")
+			md-grid-tile.nosotros(md-colspan="2" md-colspan-sm="10" md-colspan-xs="10" md-rowspan="1")
+				.title
+					img(src="img/Txt_Porque_nos_prefieren.png")
+			md-grid-tile.ubicaciones(md-colspan="4" md-colspan-sm="10" md-colspan-xs="10" md-rowspan="1" style="background-image:url(img/Back_Conoce_nuestras_tiendas2.png)")
+			md-grid-tile.galeria(md-colspan="4" md-colspan-sm="10" md-colspan-xs="10" md-rowspan="1")
+				.title
+					img(src="img/Txt_Visita_nuestra_galeria.png")
+
+			md-grid-tile.promociones(md-colspan="5" md-colspan-sm="10" md-colspan-xs="10" md-rowspan="1")
+				img(src="img/Txt_Grandes_Descuentos.png")
+			md-grid-tile.aquaspa(md-colspan="5" md-colspan-sm="10" md-colspan-xs="10" md-rowspan="1" style="background-image:url(img/Back_Disenamos_tu_espacio_2.jpg)")
+			

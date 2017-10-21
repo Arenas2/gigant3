@@ -1,0 +1,145 @@
+azulObscuro = #0B2347
+gris = #373435
+amarillo = #FFCC00
+rojo = #F70F0F
+verde = #99CC33
+azul = #1C4A78
+
+ngxs = "(max-width: 600px)"
+ngsm = "(min-width: 601px) and (max-width: 960px)"
+ngmd = "(min-width: 961px) and (max-width: 1280px)"
+lg = "(min-width: 1281px) and (max-width: 1920px)"
+xl = "(min-width: 1921px)"
+
+html, body
+	background-color inherit
+
+.background-blanco
+	background-color white
+
+.background-negro
+	background-color black
+
+.background-azul
+	background-color azul
+.background-rojo
+	background-color rojo
+.background-amarillo
+	background-color amarillo
+.background-verde
+	background-color verde
+
+.panel
+	pointer-events auto !important
+
+md-grid-list
+	margin-top 30px
+	md-grid-tile
+		background-position center
+		background-size cover
+header
+	height inherit
+	@media ngxs
+		height 70px
+	.header-content
+		width 100%
+		height 150px
+		background-color azulObscuro
+		.logo-container
+			img
+				height 70px
+		.slogan-container
+			img
+				height 30px
+		.md-button
+			md-icon
+				color white
+	.subheader
+		height 48px
+		width 100%
+		background-color gris
+		.md-button
+			color white !important
+
+.galeria
+	md-grid-list
+		margin-top 30px
+		md-grid-tile
+			background-size cover
+			background-position center center
+
+.productos
+	md-grid-list
+		md-grid-tile
+			.img-container
+				img
+					height 100px
+					margin-left 50px
+
+.catalogos
+	md-grid-list
+		md-grid-tile
+			background-position center
+			background-size cover
+
+			img
+				width 100%
+
+.home
+	.slider
+		height 360px
+		.slide
+			background-position center
+			background-size cover
+	md-grid-list
+		md-grid-tile
+			background-position center
+			background-size cover
+		.productos
+			background-color amarillo
+		.catalogos
+			background-color rojo
+		.nosotros
+			background-color azulObscuro
+		.ubicaciones
+			background-color rojo
+		.galeria
+			background-color gris
+		.promociones
+			background-color rojo
+			img
+				height 180px
+		.aquaspa
+			background-color azul
+		.title
+			height 80px
+			img
+				height 80px
+
+.filtro
+	.titulo
+		height 100px
+		margin 20px 0
+		h1
+			text-align center
+			font-size 36px
+			color white
+
+	md-grid-list
+		md-grid-tile
+			md-card
+				md-card-title
+					padding 0 16px
+				md-list
+					md-list-item
+						height 15px
+						min-height 15px
+						.md-list-item-text
+							font-size 11px
+
+
+footer
+	height 160px
+	background-color gris
+	img
+		height 80px

@@ -1,0 +1,24 @@
+.producto form {
+  margin: 0px;
+}
+.producto form .md-button {
+  margin: 0px;
+  border-radius: 0px;
+}
+.producto form .md-button.large {
+  width: 100%;
+}
+.producto form .image-container .dropify-container .dropify-wrapper {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.producto form .image-container .croppie-container {
+  display: flex;
+  height: inherit !important;
+}
+.producto form .image-container .croppie-container ng-croppie {
+  height: inherit !important;
+  margin: 0px;
+  display: inline-block;
+}

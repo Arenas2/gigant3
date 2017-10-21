@@ -1,0 +1,147 @@
+html,
+body {
+  background-color: inherit;
+}
+.background-blanco {
+  background-color: #fff;
+}
+.background-negro {
+  background-color: #000;
+}
+.background-azul {
+  background-color: #1c4a78;
+}
+.background-rojo {
+  background-color: #f70f0f;
+}
+.background-amarillo {
+  background-color: #fc0;
+}
+.background-verde {
+  background-color: #9c3;
+}
+.panel {
+  pointer-events: auto !important;
+}
+md-grid-list {
+  margin-top: 30px;
+}
+md-grid-list md-grid-tile {
+  background-position: center;
+  background-size: cover;
+}
+header {
+  height: inherit;
+}
+@media (max-width: 600px) {
+  header {
+    height: 70px;
+  }
+}
+header .header-content {
+  width: 100%;
+  height: 150px;
+  background-color: #0b2347;
+}
+header .header-content .logo-container img {
+  height: 70px;
+}
+header .header-content .slogan-container img {
+  height: 30px;
+}
+header .header-content .md-button md-icon {
+  color: #fff;
+}
+header .subheader {
+  height: 48px;
+  width: 100%;
+  background-color: #373435;
+}
+header .subheader .md-button {
+  color: #fff !important;
+}
+.galeria md-grid-list {
+  margin-top: 30px;
+}
+.galeria md-grid-list md-grid-tile {
+  background-size: cover;
+  background-position: center center;
+}
+.productos md-grid-list md-grid-tile .img-container img {
+  height: 100px;
+  margin-left: 50px;
+}
+.catalogos md-grid-list md-grid-tile {
+  background-position: center;
+  background-size: cover;
+}
+.catalogos md-grid-list md-grid-tile img {
+  width: 100%;
+}
+.home .slider {
+  height: 360px;
+}
+.home .slider .slide {
+  background-position: center;
+  background-size: cover;
+}
+.home md-grid-list md-grid-tile {
+  background-position: center;
+  background-size: cover;
+}
+.home md-grid-list .productos {
+  background-color: #fc0;
+}
+.home md-grid-list .catalogos {
+  background-color: #f70f0f;
+}
+.home md-grid-list .nosotros {
+  background-color: #0b2347;
+}
+.home md-grid-list .ubicaciones {
+  background-color: #f70f0f;
+}
+.home md-grid-list .galeria {
+  background-color: #373435;
+}
+.home md-grid-list .promociones {
+  background-color: #f70f0f;
+}
+.home md-grid-list .promociones img {
+  height: 180px;
+}
+.home md-grid-list .aquaspa {
+  background-color: #1c4a78;
+}
+.home md-grid-list .title {
+  height: 80px;
+}
+.home md-grid-list .title img {
+  height: 80px;
+}
+.filtro .titulo {
+  height: 100px;
+  margin: 20px 0;
+}
+.filtro .titulo h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+}
+.filtro md-grid-list md-grid-tile md-card md-card-title {
+  padding: 0 16px;
+}
+.filtro md-grid-list md-grid-tile md-card md-list md-list-item {
+  height: 15px;
+  min-height: 15px;
+}
+.filtro md-grid-list md-grid-tile md-card md-list md-list-item .md-list-item-text {
+  font-size: 11px;
+}
+footer {
+  height: 160px;
+  background-color: #373435;
+}
+footer img {
+  height: 80px;
+}
