@@ -37,8 +37,6 @@ app.service('Catalogo', function($http, alertas, $q){
 });
 
 
-
-
 app.service('Cotizacion', function($http, alertas, $q){
 
     this.crear = function(cotizacion) {return axios.post('/data/cotizacion', cotizacion)}

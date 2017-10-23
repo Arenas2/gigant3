@@ -76,6 +76,10 @@ header .subheader .md-button {
   background-size: cover;
   background-position: center center;
 }
+.promociones img,
+.ubicaciones img {
+  width: 100%;
+}
 .productos h1 {
   text-align: center;
 }
@@ -95,6 +99,11 @@ header .subheader .md-button {
 }
 .home .slider {
   height: 360px;
+}
+@media (max-width: 600px) {
+  .home .slider {
+    height: 130px;
+  }
 }
 .home .slider .slide {
   background-position: center;
