@@ -2,25 +2,49 @@
 	md-card.titulo(style="background-color : {{categoria.color}}")
 		h1 {{categoria.nombre}}
 
-	.filtro-content(layout="row")
-		.filtros(flex="20" layout="column")
-			md-input-container
-				label Selecciona una marca
-				md-select(ng-model="producto.IdMarca")
-					md-option(ng-value="marca.id" ng-repeat="marca in marcas") {{marca.nombre}}
-			md-input-container
-				label Selecciona un color
-				md-select(ng-model="producto.IdColor")
-					md-option(ng-value="color.id" ng-repeat="color in colores") {{color.nombre}}
-		.contenido(flex)
-			md-grid-list(md-cols="4" md-row-height="2:3")
-				md-grid-tile(md-colspan="1" md-rowspan="1" ng-repeat="producto in productos")
-					md-card
-						img.md-card-image(src="{{producto.imagen}}")
-						md-card-title
-							md-card-title-text {{producto.nombre}}
-						md-list
-							md-list-item(ng-repeat="info in producto.infos")
-								.md-list-item-text
-									strong {{info.atributo.nombre}}
-									|  {{info.contenido}}
+	.filtro-content(layout="row" layout-xs="column" layout-sm="column")
+		.side(flex-gt-sm="20" flex-md="30" layout="column")
+			.filtros
+				md-card
+					md-subheader filtros
+					md-card-content
+						md-input-container
+							label Selecciona una marca
+							md-select(ng-model="producto.IdMarca")
+								md-option(ng-value="marca.id" ng-repeat="marca in marcas") {{marca.nombre}}
+						md-input-container
+							label Selecciona un color
+							md-select(ng-model="producto.IdColor")
+								md-option(ng-value="color.id" ng-repeat="color in colores") {{color.nombre}}
+			.cotizador
+				md-card
+					md-subheader Productos interesados
+					md-list(ng-if="cotizacion.bolsa.length > 0")
+						md-list-item(ng-repeat="productointeresados in cotizacion.bolsa" ng-init="hover = false"  ng-mouseover="hover = true" ng-mouseleave="hover = false")
+							.md-list-item-text
+								p {{productointeresados.nombre}}
+							.md-secondary(ng-if="hover")
+								md-button(ng-click="eliminar($index)" md-colors="{ background: 'red'}" )
+									md-icon clear
+						.opciones(layout="row")
+							md-button(ng-click="enviar()" md-colors="{ background: 'green'}" flex)
+								md-icon send
+							md-button(ng-click="vaciar()" md-colors="{ background: 'red'}" flex)
+								md-icon delete
+		.contenido(flex flex-xs="100" flex-sm="100")
+			md-progress-circular(md-mode="indeterminate" style="margin:auto" ng-if="loading")
+			md-grid-list(md-cols="4" md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-row-height="2:3" md-row-height-xs="200px" md-row-height-sm="200px" ng-if="!loading")
+				md-grid-tile(md-colspan="1" md-col md-rowspan="1" ng-repeat="producto in productos" ng-init="hover = false"  ng-mouseover="hover = true" ng-mouseleave="hover = false"  ng-class="hover ? 'conHover' : 'sinHover'")
+					md-card(layout="column" layout-xs="row" layout-sm="row") 
+						.foto(ng-if="!hover")
+							img.md-card-image(src="{{producto.imagen}}")
+						.contenido(ng-if="!hover")
+							md-card-title
+								md-card-title-text {{producto.nombre}}
+							md-list
+								md-list-item(ng-repeat="info in producto.infos")
+									.md-list-item-text
+										strong {{info.atributo.nombre}}
+										|  {{info.contenido}}
+					md-card.click(ng-if="hover" ng-click="agregar(producto)") 
+						h4 Agregar a lista

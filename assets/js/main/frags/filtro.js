@@ -4,6 +4,8 @@ app.controller('filtroCtrl', function($scope, $state, $stateParams, Producto) {
 
     console.log($stateParams.categoria)
 
+    $scope.loading = true;
+
     if($stateParams.categoria === null){
         $state.go('productos')
     }else{
@@ -25,6 +27,7 @@ app.controller('filtroCtrl', function($scope, $state, $stateParams, Producto) {
 
         Producto.filtro(peticion).then(res => {
             $scope.productos = res.data;
+            $scope.loading = false;
             $scope.$digest()
             console.log(res.data);
         })

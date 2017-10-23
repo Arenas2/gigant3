@@ -20,6 +20,14 @@ var routeInfo = require('./http/routes/routeInfo');
 var routeProducto = require('./http/routes/routeProducto');
 var routeMarca = require('./http/routes/routeMarca');
 var routeColor = require('./http/routes/routeColor');
+var routeGaleria = require('./http/routes/routeGaleria');
+var routePromo = require('./http/routes/routePromo');
+var routeCatalogo = require('./http/routes/routeCatalogo');
+var routeSucursal = require('./http/routes/routeSucursal');
+var routeTelefono = require('./http/routes/routeTelefono');
+var routeCotizacion = require('./http/routes/routeCotizacion');
+
+
 // - Conexion a la base de datos
 
 var con = require('./http/connection');
@@ -54,6 +62,12 @@ app.use('/', routeInfo);
 app.use('/', routeProducto);
 app.use('/', routeMarca);
 app.use('/', routeColor);
+app.use('/', routeGaleria);
+app.use('/', routePromo);
+app.use('/', routeCatalogo);
+app.use('/', routeSucursal);
+app.use('/', routeTelefono);
+app.use('/', routeCotizacion);
 
 
 app.use(lessMiddleware(__dirname + '/assets'));

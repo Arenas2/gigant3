@@ -28,3 +28,19 @@ app.service('Producto', function($http, alertas, $q){
     this.eliminar = function(id) {return axios.delete('/data/producto/' + id)}
 
 });
+
+
+app.service('Catalogo', function($http, alertas, $q){
+
+    this.obtener = function() {return axios('/data/catalogo')}
+
+});
+
+
+
+
+app.service('Cotizacion', function($http, alertas, $q){
+
+    this.crear = function(cotizacion) {return axios.post('/data/cotizacion', cotizacion)}
+
+});

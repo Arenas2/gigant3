@@ -1,9 +1,9 @@
-md-dialog(style="width:60vw;")
+md-dialog.enviarcotizacion(style="width:60vw;")
     md-toolbar
         .md-toolbar-tools
             h4 Nuevo Producto
     form(ng-submit="submit(producto)" layout="column")
-        .form-content(layout="row" layout-align="center center")
+        .form-content(layout="row" layout-align="center center" flex)
                 md-input-container(flex)
                     label Nombre del Producto
                     input(ng-model="producto.nombre" required)
