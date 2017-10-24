@@ -40,7 +40,6 @@
     "commit": "1e89019d47d9cd98c5359adc9f1070b3bddbe44b"
   },
   "_source": "https://github.com/Foliotek/Croppie.git",
-  "_target": "^2.5.0",
-  "_originalSource": "croppie",
-  "_direct": true
+  "_target": "2.5.0",
+  "_originalSource": "croppie"
 }

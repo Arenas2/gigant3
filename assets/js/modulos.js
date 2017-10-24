@@ -11,6 +11,10 @@ app.config(['$ocLazyLoadProvider', function ($ocLazyLoadProvider) {
 				name: 'ozProductos',
 				files: ['js/main/frags/productos.js']
 			},
+            {
+				name: 'ozFiltro',
+				files: ['js/main/frags/filtro.js']
+			},
 			{
 				name: 'ozGaleria',
 				files: ['js/main/frags/galeria.js']
@@ -39,17 +43,29 @@ app.config(['$ocLazyLoadProvider', function ($ocLazyLoadProvider) {
 				name: 'ozAdminProducto',
 				files: ['js/admin/frags/producto.js']
 			},
+            {
+                name: 'ozAdminGaleria',
+                files: ['js/admin/frags/galeria.js']
+            },
+            {
+                name: 'ozAdminPromo',
+                files: ['js/admin/frags/promo.js']
+            },
+            {
+                name: 'ozAdminCatalogo',
+                files: ['js/admin/frags/catalogo.js']
+            },
+            {
+                name: 'ozAdminSucursal',
+                files: ['js/admin/frags/sucursal.js']
+            },
 			{
 				name: 'ozAdminInfoProducto',
 				files: ['js/admin/frags/infoproducto.js']
 			},
-			{
-				name: 'ozUserHome',
-				files: ['js/user/frags/home.js']
-			},
-			{
-				name: 'ozFiltro',
-				files: ['js/main/frags/filtro.js']
+            {
+				name: 'ozAdminCotizaciones',
+				files: ['js/admin/frags/cotizaciones.js']
 			}
         ]
     });

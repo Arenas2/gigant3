@@ -24,9 +24,14 @@ div(layout="row" layout-align="center center")
                     img.md-avatar(ng-src="{{producto.imagen}}")
                     .md-list-item-text
                         h2 {{producto.nombre}}
-                    .md-secondary
-                        md-button(md-colors="{background: 'green'}" ng-click="seleccionar(producto)" ui-sref="infoProducto({id:producto.id})")
-                            md-icon edit
-                        md-button(md-colors="{background: 'red'}" ng-click="eliminarProducto(producto,$index)")
-                            md-icon clear
+                    md-fab-toolbar(md-open="false" count="0"  md-direction="left" flex)
+                        md-fab-trigger
+                            md-button
+                                md-icon more_vert
+                        md-toolbar
+                            md-fab-actions(layout="row")
+                                md-button(md-colors="{background: 'green'}" ng-click="seleccionar(producto)" ui-sref="infoProducto({id:producto.id})")
+                                    md-icon edit
+                                md-button(md-colors="{background: 'red'}" ng-click="eliminarProducto(producto,$index)")
+                                    md-icon clear
                     md-divider

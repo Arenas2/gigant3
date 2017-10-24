@@ -15,6 +15,28 @@ app.controller('adminCtrl', function ($scope, $rootScope, $http, mdDialog, $time
             nombre: 'Productos',
             icon: 'shopping_cart',
             state: 'producto'
+        },
+        {
+            nombre: 'Cotizaciones',
+            icon: 'list',
+            state: 'cotizaciones'
+        },
+        {
+            nombre: 'Galeria',
+            icon: 'photo_album',
+            state: 'galeria'
+        }, {
+            nombre: 'Promociones',
+            icon: 'local_offer',
+            state: 'promo'
+        }, {
+            nombre: 'Catalogos',
+            icon: 'bookmaker',
+            state: 'catalogo'
+        }, {
+            nombre: 'Sucursales',
+            icon: 'store',
+            state: 'sucursal'
         }
     ];
 

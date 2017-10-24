@@ -1,0 +1,30 @@
+md-card
+    md-toolbar
+        .md-toolbar-tools
+            h4 Cotizaciones
+    md-table-container
+        table(md-table md-row-select multiple)
+            thead(md-head)
+                tr(md-row)
+                    th(md-column md-numeric md-order-by="cotizacion.createdAt")
+                        md-icon date_range
+                        strong Fecha
+                    th(md-column md-numeric) Nombre
+                    th(md-column md-numeric)
+                        md-icon phone
+                        | Total Costo
+                    th(md-column md-numeric)
+                        md-icon mail
+                        | Total Costo
+                    th(md-column md-numeric) Ciudad
+                    th(md-column md-numeric) Direccion
+            tbody(md-body)
+                tr(md-row md-select="dato" md-select-id="name" md-auto-select ng-repeat="cotizacion in cotizaciones")
+                    td(md-cell) {{cotizacion.createdAt | date:'medium' }}
+                    td(md-cell) {{cotizacion.nombre}}
+                    td(md-cell) {{cotizacion.telefono}}
+                    td(md-cell) {{cotizacion.correo}}
+                    td(md-cell) {{cotizacion.ciudad}}
+                    td(md-cell) {{cotizacion.direccion}}
+    md-table-pagination(md-page-select)
+                    

@@ -40,5 +40,43 @@ app.service('Catalogo', function($http, alertas, $q){
 app.service('Cotizacion', function($http, alertas, $q){
 
     this.crear = function(cotizacion) {return axios.post('/data/cotizacion', cotizacion)}
+    this.obtener = function() {return axios('/data/cotizacion')}
+
+});
+
+
+app.service('Galeria', function($http, alertas, $q){
+
+    this.obtener = function() {return axios('/data/galeria/')}
+    this.crear = function(galeria){return axios.post('/data/galeria', galeria)}
+    this.editar = function(galeria) {return axios.put('/data/galeria/' + galeria.id, galeria)}
+    this.eliminar = function(id) {return axios.delete('/data/galeria/' + id)}
+
+});
+
+app.service('Promo', function($http, alertas, $q){
+
+    this.obtener = function() {return axios('/data/promo/')}
+    this.crear = function(promo){return axios.post('/data/promo', promo)}
+    this.editar = function(promo) {return axios.put('/data/promo/' + promo.id, promo)}
+    this.eliminar = function(id) {return axios.delete('/data/promo/' + id)}
+
+});
+
+app.service('Catalogo', function($http, alertas, $q){
+
+    this.obtener = function() {return axios('/data/catalogo/')}
+    this.crear = function(catalogo){return axios.post('/data/catalogo', catalogo)}
+    this.editar = function(catalogo) {return axios.put('/data/catalogo/' + catalogo.id, catalogo)}
+    this.eliminar = function(id) {return axios.delete('/data/catalogo/' + id)}
+
+});
+
+app.service('Sucursal', function($http, alertas, $q){
+
+    this.obtener = function() {return axios('/data/sucursal/')}
+    this.crear = function(sucursal){return axios.post('/data/sucursal', sucursal)}
+    this.editar = function(sucursal) {return axios.put('/data/sucursal/' + sucursal.id, sucursal)}
+    this.eliminar = function(id) {return axios.delete('/data/sucursal/' + id)}
 
 });

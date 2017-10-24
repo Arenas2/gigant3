@@ -7,7 +7,8 @@ var app = angular.module('myapp', [
     'oc.lazyLoad',
     'ngStorage',
     'uiGmapgoogle-maps',
-    'ngCroppie'
+    'ngCroppie',
+    'md.data.table'
 ]);
 
 //TEMAS

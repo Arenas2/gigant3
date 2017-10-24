@@ -1,3 +1,10 @@
+md-toolbar {
+  background-color: #0b2347 !important;
+}
+md-sidenav md-icon {
+  margin: 20px;
+  color: #0b2347 !important;
+}
 .producto form {
   margin: 0px;
 }
